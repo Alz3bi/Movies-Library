@@ -8,6 +8,8 @@
 
 ## Overview
 
+This project shows an example of requesting and responses from Third-party APIs inside a local java-script server.
+
 ## Getting Started
 
 1. Clone this project to your local machine
@@ -24,7 +26,7 @@
     git clone https://github.com/Alz3bi/Movies-Library.git
     ```
 
-2. install NPM and Node.js, node Express
+2. install NPM and Node.js
 
 3. Run the server
 
@@ -34,4 +36,4 @@
 
 ## Project Features
 
-1. Return Data From data.json to Home Page.
+1. Fecth data from themoviedb API.
