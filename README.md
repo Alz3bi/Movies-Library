@@ -1,4 +1,4 @@
-# Movies Library - 1.0.0
+# Movies Library - 3.0.0
 
 **Author Name**: Mohammed Alzoubi
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This project shows an example of requesting and responses from Third-party APIs inside a local java-script server.
+Movie Library is a project to demonstrate some functions of javaScript, Getting data form Third-party API, Storing and retreving data from postregSQL database.
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ This project shows an example of requesting and responses from Third-party APIs 
     git clone https://github.com/Alz3bi/Movies-Library.git
     ```
 
-2. install NPM and Node.js
+2. install NPM, Node.js, PostregSQL
 
 3. Run the server
 
@@ -37,3 +37,5 @@ This project shows an example of requesting and responses from Third-party APIs 
 ## Project Features
 
 1. Fecth data from themoviedb API.
+
+2. Store and retrive data from PostregSQL database.
