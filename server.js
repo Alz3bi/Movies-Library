@@ -7,8 +7,13 @@ require("dotenv").config();
 
 const server = express();
 const PORT = 3000;
-const client =new pg.Client("postgressql://localhost:5432/movieslibrary")
 let apiKey = process.env.apiKey;
+const dataBase = process.env.PG_DATABASE
+const userName = process.env.PG_USER
+const passWord = process.env.PG_PASSWORD
+const host = process.env.PG_HOST
+const dataBasePort = process.env.PG_PORT
+const client =new pg.Client(`postgressql:${userName}:${passWord}@${host}:${dataBasePort}/${dataBase}`)
 
 function Movies(id, title, release_date, poster_path, overview) {
     this.id = id;
