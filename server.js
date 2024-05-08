@@ -13,7 +13,7 @@ const userName = process.env.PG_USER
 const passWord = process.env.PG_PASSWORD
 const host = process.env.PG_HOST
 const dataBasePort = process.env.PG_PORT
-const client =new pg.Client(`postgresql:${userName}:${passWord}@${host}:${dataBasePort}/${dataBase}`)
+const client =new pg.Client(`postgres://${userName}:${passWord}@${host}:${dataBasePort}/${dataBase}`)
 
 function Movies(id, title, release_date, poster_path, overview) {
     this.id = id;
