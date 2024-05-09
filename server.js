@@ -156,8 +156,8 @@ function trendingTVsHandler(req, res) {
 function addMovieHandler(req, res) {
     try{
         const movie = req.body 
-        const sql = "INSERT INTO movies(movie_title, movie_release_date, movie_poster_path, movie_overview) VALUES($1, $2, $3, $4) RETURNING *;"
-        const values = [movie.title, movie.release_date, movie.poster_path, movie.overview]
+        const sql = "INSERT INTO movies(movie_title, movie_release_date, movie_poster_path, movie_overview, movie_comments) VALUES($1, $2, $3, $4, $5) RETURNING *;"
+        const values = [movie.movie_title, movie.movie_release_date, movie.movie_poster_path, movie.movie_overview, movie.movie_comments]
         client.query(sql, values)
             .then((data) => {
                 res.send("your data was added")
@@ -174,8 +174,8 @@ function addMovieHandler(req, res) {
 function updateMovieHandler(req, res) {
     try{
         const id = req.params.id
-        const sql = `UPDATE movies SET movie_title=$1, movie_release_date=$2 ,movie_poster_path=$3 ,movie_overview=$4 WHERE movie_id = ${id} RETURNING *`
-        const values = [req.body.title, req.body.release_date, req.body.poster_path, req.body.overview]
+        const sql = `UPDATE movies SET movie_title=$1, movie_release_date=$2 ,movie_poster_path=$3 ,movie_overview=$4 ,movie_comments=$5 WHERE movie_id = ${id} RETURNING *`
+        const values = [req.body.movie_title, req.body.movie_release_date, req.body.movie_poster_path, req.body.movie_overview, req.body.movie_comments]
         console.log(values);
         client.query(sql, values)
             .then((data) => {
